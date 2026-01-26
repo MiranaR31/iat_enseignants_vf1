@@ -4,9 +4,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 
     return iatExtension({
         category1 : {
-            name : global.ImmigrantLabels, //Will appear in the data.
+            name : 'Immigrant', //Will appear in the data.
             title : {
-                media : {word : global.ImmigrantLabels}, //Name of the category presented in the task.
+                media : {word : 'Immigrant'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -22,9 +22,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : global.Native, //Will appear in the data.
+            name : 'Native', //Will appear in the data.
             title : {
-                media : {word : global.Native}, //Name of the category presented in the task.
+                media : {word : 'Native'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -47,14 +47,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: global.negWords[0]},
-                {word: global.negWords[1]},
-                {word: global.negWords[2]},
-                {word: global.negWords[3]},
-                {word: global.negWords[4]},
-                {word: global.negWords[5]},
-                {word: global.negWords[6]},
-                {word: global.negWords[7]}
+                {word: 'Irrespectueux'},
+				{word: 'Incapable'},
+				{word: 'Paresseux'},
+				{word: 'Involontaire'},
+                {word: 'Lent'},
+                {word: 'Bruyant'},
+                {word: 'Distrait'},
+                {word: 'Démotivé'}
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -67,14 +67,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: global.posWords[0]},
-                {word: global.posWords[1]},
-                {word: global.posWords[2]},
-                {word: global.posWords[3]},
-                {word: global.posWords[4]},
-                {word: global.posWords[5]},
-                {word: global.posWords[6]},
-                {word: global.posWords[7]}
+                {word: 'Respectueux'},
+				{word: 'Capable'},
+				{word: 'Préparé'},
+				{word: 'Volontaire'},
+                {word: 'Intelligent'},
+                {word: 'Compétent'},
+                {word: 'Studieux'},
+                {word: 'Précis'},
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
