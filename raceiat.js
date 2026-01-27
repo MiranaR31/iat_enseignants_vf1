@@ -22,9 +22,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : 'Native', //Will appear in the data.
+            name : 'Natif', //Will appear in the data.
             title : {
-                media : {word : 'Native'}, //Name of the category presented in the task.
+                media : {word : 'Natif'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -40,9 +40,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },
         attribute1 : {
-            name : 'Bad words',
+            name : 'Négatif',
             title : {
-                media : {word : 'Bad words'},
+                media : {word : 'Négatif'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -60,9 +60,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
         },
         attribute2 : {
-            name : 'Good words',
+            name : 'Positif',
             title : {
-                media : {word : 'Good words'},
+                media : {word : 'Positif'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
