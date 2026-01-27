@@ -276,25 +276,25 @@ define(['questAPI'], function(Quest){
 	//Profs
 	API.addQuestionsSet('prof1',{
 		inherit : 'likert5',
-		name : 'prof_1',
+		name : 'prof_reponse_eleve',
 		stem : 'Dans votre enseignement, vous laissez les étudiants chercher les réponses eux-mêmes, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.',
 	});
 
 	API.addQuestionsSet('prof2',{
 		inherit : 'likert5',
-		name : 'prof_2',
+		name : 'prof_participation_eleve',
 		stem : 'Dans votre enseignement, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.',
 	});
 
 	API.addQuestionsSet('prof3',{
 		inherit : 'likert5',
-		name : 'prof_3',
+		name : 'prof_travail_eleve',
 		stem : 'Si un étudiant travaille suffisamment, il peut devenir le meilleur de sa classe (peu importe ses capacités innées).',
 	});
 
 	API.addQuestionsSet('prof4',{
 		inherit : 'likert5',
-		name : 'prof_4',
+		name : 'prof_autorite',
 		stem : 'Les enseignants doivent garder une certaine distance et incarner l\'autorité dans leur relation avec les étudiants.',
 	});
 
@@ -387,13 +387,38 @@ define(['questAPI'], function(Quest){
 
 
     API.addSequence([
-        {inherit:'basicPage', questions: {inherit:'explicit1'}},
-		{inherit:'basicPage', questions: {inherit:'explicit2'}},
-		{inherit:'basicPage', questions: {inherit:'explicit3'}},
-        {inherit:'basicPage', questions: {inherit:'prof1'}},
-		{inherit:'basicPage', questions: {inherit:'prof2'}},
-		{inherit:'basicPage', questions: {inherit:'prof3'}},
-		{inherit:'basicPage', questions: {inherit:'prof4'}}
+		//demographie
+		{
+			inherit:'basicPage',
+			questions:[
+				{inherit:'genre'},
+				{inherit:'age'},
+				{inherit:'pays_naissance'}
+				},
+		{//explicit
+			mixer:'random',
+			wrapper:'true',
+			data:[
+				{inherit:'basicPage', questions: {inherit:'explicit1'}},
+				{inherit:'basicPage', questions: {inherit:'explicit2'}},
+				{inherit:'basicPage', questions: {inherit:'explicit3'}}
+				]
+		},
+		//prof
+		{
+			mixer:'random',
+			wrapper:'true',
+			data:[		
+		        {inherit:'basicPage', questions: {inherit:'prof1'}},
+				{inherit:'basicPage', questions: {inherit:'prof2'}},
+				{inherit:'basicPage', questions: {inherit:'prof3'}},
+				{inherit:'basicPage', questions: {inherit:'prof4'}}
+				]
+		},
+		{inherit:'basicPage',questions:{inherit:'contrat'}},
+		{inherit:'basicPage',condition:'<%=current.questions.contrat == 3 %>',
+		 questions:{inherit:'vacataire'}},
+		{inherit:'basicPAge',questions:{inherit:'satisfaction'}}
     ]);
 
 
