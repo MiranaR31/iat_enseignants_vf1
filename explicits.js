@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
-        progressBar:  'Page <%= pagesMeta.number %> sur 7'
+        progressBar:  'Page <%= pagesMeta.number %> sur 12'
     });
 
 
@@ -410,9 +410,14 @@ define(['questAPI'], function(Quest){
 				{inherit:'basicPage', questions: {inherit:'prof4'}}
 				]
 		},
-		{inherit:'basicPage',questions:{inherit:'contrat'}},
-		{inherit:'basicPage',condition:'<%=current.questions.contrat == 3 %>',
-		 questions:{inherit:'vacataire'}},
+		{inherit:'basicPage', questions:{inherit:'contrat'}},
+		{
+			inherit:'basicPage',
+			condition: function(){ 
+				return this.current.questions.contrat == 3; 
+			},
+			questions:{inherit:'vacataire'}
+		},
 		{inherit:'basicPage',questions:{inherit:'satisfaction'}}
     ]);
 
