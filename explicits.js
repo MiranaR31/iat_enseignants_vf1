@@ -391,8 +391,8 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'genre'}},
 		{inherit:'basicPage',questions:{inherit:'age'}},
 		{inherit:'basicPage',questions:{inherit:'pays_naissance'}}
-				]
-		},
+		]);
+	
 		{//explicit
 			mixer:'random',
 			wrapper:true,
