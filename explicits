@@ -1,0 +1,60 @@
+define(['questAPI'], function(Quest){
+    let API = new Quest();
+    let isTouch = API.getGlobal().$isTouch;
+	
+    /**
+	* Page prototype
+	*/
+    API.addPagesSet('basicPage',{
+        noSubmit:false, //Change to true if you don't want to show the submit button.
+        header: 'Questionnaire',
+        decline: false,
+        declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
+        autoFocus:true, 
+        progressBar:  'Page <%= pagesMeta.number %> sur 12'
+    });
+
+
+    /**
+	* Question prototypes
+	*/
+    API.addQuestionsSet('basicQ',{
+        decline: 'true',
+        required : true, 		
+        errorMsg: {
+            required: isTouch 
+                ? 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser\'' 
+                : 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser de répondre\''
+        },
+        autoSubmit:'false',
+        numericValues:'true',
+        help: '<%= pagesMeta.number < 3 %>',
+        helpText: 'Astuce : Vous pouvez double-cliquer sur votre réponse pour passer à la question suivante.',
+		helpText: 'Attention, vous ne pourrez pas revenir sur votre réponse précédente.'
+	});
+    API.addQuestionsSet('basicSelect',{ //Sélection unique 
+        inherit :'basicQ',
+        type: 'selectOne'
+    });
+	
+    API.addQuestionsSet('basicDropdown',{ //Menu déroulant 
+        inherit :'basicQ',
+        type : 'dropdown',
+        autoSubmit:false
+    });
+
+	API.addQuestionsSet('basicText',{
+		inherit : 'basicQ',
+		type : 'text',
+	});
+	
+    API.addQuestionsSet('likert5',{ //Likert
+        inherit: 'basicSelect',
+        answers: [
+            {text:'Tout à fait d\'accord', value:5},
+			{text:'Plutôt d\'accord', value:4},
+			{text:'Ni d\'accord ni pas d\'accord', value:3},
+			{text:'Plutôt pas d\'accord', value:2},
+			{text:'Pas du tout d\'accord', value:1}
+        ]
+    });
