@@ -4,37 +4,37 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 
     return iatExtension({
         category1 : {
-            name : 'Immigrant', //Will appear in the data.
+            name : 'Immigrants', //Will appear in the data.
             title : {
                 media : {word : 'Immigrant'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: 'Yacine'},
-                {word: 'Mohamed'},
-                {word: 'Youssef'},
-                {word: 'Mehdi'},
-                {word: 'Ibrahim'},                 
-                {word: 'Younes'}     
+                {word: 'Yasmine'},
+                {word: 'Zaynab'},
+                {word: 'Fatima'},
+                {word: 'Aya'},
+                {word: 'Kenza'},                 
+                {word: 'Mariem'}     
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : 'Natif', //Will appear in the data.
+            name : 'Français', //Will appear in the data.
             title : {
                 media : {word : 'Natif'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: 'Thomas'},
-                {word: 'Adrien'},
-                {word: 'Maxime'},
-                {word: 'Louis'},
-                {word: 'Hugo'},                 
-                {word: 'Martin'} 
+                {word: 'Noémie'},
+                {word: 'Zoé'},
+                {word: 'Eva'},
+                {word: 'Jade'},
+                {word: 'Chloé'},                 
+                {word: 'Mathilde'} 
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}

@@ -115,7 +115,7 @@ define(['managerAPI',
         {
             mixer:'random',
             data:[
-                {inherit: 'explicits'},
+                {inherit: 'demographics'},
 
                 // force the instructions to preceed the iat
                 {
