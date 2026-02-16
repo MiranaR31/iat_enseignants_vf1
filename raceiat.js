@@ -4,7 +4,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 
     return iatExtension({
         category1 : {
-            name : 'Immigrant', //Will appear in the data.
+            name : 'Arabo-musulman', //Will appear in the data.
             title : {
                 media : {word : 'Immigrant'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
@@ -22,7 +22,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : 'Natif', //Will appear in the data.
+            name : 'Français', //Will appear in the data.
             title : {
                 media : {word : 'Natif'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
