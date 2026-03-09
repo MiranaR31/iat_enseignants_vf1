@@ -6,7 +6,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         category1 : {
             name : 'Arabo-musulman', //Will appear in the data.
             title : {
-                media : {word : 'Immigrant'}, //Name of the category presented in the task.
+                media : {word : 'Arabo-musulman'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -24,7 +24,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         category2 : {
             name : 'Français', //Will appear in the data.
             title : {
-                media : {word : 'Natif'}, //Name of the category presented in the task.
+                media : {word : 'Français'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 

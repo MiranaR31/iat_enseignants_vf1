@@ -8,10 +8,12 @@ define(['questAPI'], function(Quest){
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
-        decline: false,
+        decline: true,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
-        progressBar:  'Page <%= pagesMeta.number %> sur 12'
+        submitText: 'Suivant',
+        prev: true,
+        prevText: 'Précédent'
     });
 
 
@@ -60,71 +62,89 @@ define(['questAPI'], function(Quest){
     });
 
 	
-    /**
-	*Specific questions
-	*/	
-	//Module 1
-	API.addQuestionsSet('genre',{
-		inherit : 'basicSelect',
-		name : 'genre',
-		stem : 'Quel est votre sexe à l\'état-civil ?',
-		answers : [
-			{text : 'Homme'},
-			{text : 'Femme'}
-				]
+
+
+	//Profs
+
+	API.addQuestionsSet('0',{
+		inherit : 'basicText',
+		name : 'nom', 
+		stem : 'Votre nom'
 	});
 
-	API.addQuestionsSet('naissance1',{
+	API.addQuestionsSet('0bis',{
+		inherit : 'basicText',
+		name : 'prénom', 
+		stem : 'Votre prénom'
+	});
+
+    API.addQuestionsSet('1',{
+		inherit : 'basicSelect',
+		name : 'sexe', 
+		stem : 'Quel est votre sexe à l\'état-civil ?',
+        answers: [
+            {text:'Homme', value:1},
+            {text:'Femme', value:2}]
+	});
+
+    API.addQuestionsSet('2',{
 		inherit : 'basicText', 
-		name : 'naissance',
+        type: 'textNumber',
+		name : 'annee_naissance',
 		stem : 'Quelle est votre année de naissance ?',
-		validator : 'number', 
+        min: 1900,
+        max: 2015,
 		errorMsg : {
-			number : 'Veuillez entrer un nombre valide'
+            min: 'Veuillez indiquer une année de naissance valide.',
+            max: 'Veuillez indiquer une année de naissance valide.',
+            number: 'Veuillez indiquer une année de naissance valide.'
+        },
+        validator: {
+            min: 1900,
+            max: 2015
 		}
 	});
 
-	API.addQuestionsSet('naissance2',{
-		inherit : 'basicSelect', 
-		name : 'naissance_lieu', 
-		stem : 'Où êtes-vous né(e)?', 
-		answers : [
-			{text : 'En France', value: 1},
-			{text : 'A l\'étranger', value: 2}
-			]
-	});
-
-	API.addQuestionsSet('francais',{
+	API.addQuestionsSet('3',{
 		inherit : 'basicSelect',
-		name : 'francais', 
-		stem : 'Parliez-vous français en famille durant votre enfance ?', 
+		name : 'lieu_naissance', 
+		stem : 'Où êtes-vous né(e) ?',
 		answers : [
-			{text : 'Oui', value : 1},
-			{text : 'Non', value : 2}
-			]
+			{text:'En France', value:1},
+			{text:'A l\'étranger', value:2}]
 	});
 
-	API.addQuestionsSet('iat',{
+	API.addQuestionsSet('4',{
 		inherit : 'basicSelect',
-		name : 'iat', 
-		stem : 'Avez-vous déjà passé un Test d\'Association Implicite (IAT) ?', 
+		name : 'francais_enfance', 
+		stem : 'Est-ce que vous avez grandi en parlant français à la maison ?',
 		answers : [
-			{text : 'Oui', value : 1},
-			{text : 'Non', value : 2}
-			]
+			{text:'Oui', value:1},
+			{text:'Non', value:2}]
 	});
 
-
+	API.addQuestionsSet('5',{
+		inherit : 'basicSelect',
+		name : 'iat',
+		stem : 'Avez-vous déjà passé un test d\'association implicite (IAT) ?',
+		answers : [
+			{text:'Oui', value:1},
+			{text:'Non', value:2}]
+	});
 
     API.addSequence([
-		//demographie
-		{inherit:'basicPage',questions:{inherit:'genre'}},
-		{inherit:'basicPage',questions:{inherit:'naissance1'}},
-		{inherit:'basicPage',questions:{inherit:'naissance2'}},
-		{inherit:'basicPage',questions:{inherit:'francais'}},
-		{inherit:'basicPage',questions:{inherit:'iat'}}
+        {inherit: 'basicPage', 
+            questions: [
+                {inherit: '0'},
+                {inherit: '0bis'}
+            ]
+        },
+        {inherit: 'basicPage', questions: {inherit: '1'}},
+        {inherit: 'basicPage', questions: {inherit: '2'}},
+        {inherit: 'basicPage', questions: {inherit: '3'}},
+        {inherit: 'basicPage', questions: {inherit: '4'}},
+        {inherit: 'basicPage', questions: {inherit: '5'}}
     ]);
-
 
     return API.script;
 });

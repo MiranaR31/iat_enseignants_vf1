@@ -49,10 +49,22 @@ define(['managerAPI',
             scriptUrl: 'explicits.js'
         }],
 
+        explicit_test: [{
+            type: 'quest',
+            name: 'explicit_test',
+            scriptUrl: 'explicit_test.js'
+        }],
+
         raceiat: [{
             type: 'time',
             name: 'raceiat',
             scriptUrl: 'raceiat.js'
+        }],
+
+        raceiatf: [{
+            type: 'time',
+            name: 'raceiatf',
+            scriptUrl: 'raceiatf.js'
         }],
 
         lastpage: [{
@@ -112,21 +124,21 @@ define(['managerAPI',
         
         
         {inherit: 'intro'},
-        {
-            mixer:'random',
-            data:[
-                {inherit: 'demographics'},
-
-                // force the instructions to preceed the iat
-                {
-                    mixer: 'wrapper',
-                    data: [
-                        {inherit: 'raceiat_instructions'},
-                        {inherit: 'raceiat'}
-                    ]
-                }
-            ]
-        },
+        {inherit: 'demographics'},
+        {inherit: 'explicit_test'},
+        //{mixer: 'wrapper',
+            //data: [
+              //  {inherit: 'raceiat_instructions'},
+                //{inherit: 'raceiat'}
+           // ]
+       // },
+       // {
+        //    mixer: 'wrapper',
+          //  data: [
+          //      {inherit: 'raceiat_instructions'},
+          //      {inherit: 'raceiatf'}
+          //  ]
+        //},
 
 		{inherit: 'uploading'},
         {inherit: 'lastpage'},
