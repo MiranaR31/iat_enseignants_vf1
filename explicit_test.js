@@ -929,7 +929,7 @@ define(['questAPI'], function(Quest){
 			}
 		},
 		{inherit: 'basicPage', questions: {inherit: '6'}},
-		{inherit: 'basicPage', questions: 
+		{inherit: 'basicPage', decline: false, questions: 
 			{type: 'info',
 				description: '<span style="font-size:1.2em">Les questions suivantes portent sur les matières que vous enseignez actuellement à l\'Université Gustave Eiffel.'
 			}

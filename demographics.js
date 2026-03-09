@@ -132,6 +132,7 @@ define(['questAPI'], function(Quest){
 
     API.addSequence([
         {inherit: 'basicPage', 
+            decline: false,
             questions: [
                 {inherit: '0'},
                 {inherit: '0bis'}
