@@ -7,6 +7,7 @@ define(['questAPI'], function(Quest){
 	*/
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
+		submitText: 'Suivant',
         header: 'Questionnaire',
         decline: true,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
@@ -922,17 +923,17 @@ define(['questAPI'], function(Quest){
 	
 	
 	API.addSequence([
-		//{inherit: 'basicPage', questions: 
-			//{type : 'info',
-				//description: 'Nous allons maintenant vous poser des questions sur votre expérience en tant qu\'enseignant.'
-			//}
-		//},
-		//{inherit: 'basicPage', questions: {inherit: '6'}},
-		//{inherit: 'basicPage', questions: 
-			//{type: 'info',
-				//description: 'Les questions suivantes portent sur les matières que vous enseignez actuellement à l\'Université Gustave Eiffel.'
-			//}
-		//},
+		{inherit: 'basicPage', decline: false, questions: 
+			{type : 'info',
+				description: '<span style="font-size:1.2em">Nous allons maintenant vous poser des questions sur votre expérience en tant qu\'enseignant.'
+			}
+		},
+		{inherit: 'basicPage', questions: {inherit: '6'}},
+		{inherit: 'basicPage', questions: 
+			{type: 'info',
+				description: '<span style="font-size:1.2em">Les questions suivantes portent sur les matières que vous enseignez actuellement à l\'Université Gustave Eiffel.'
+			}
+		},
 		{inherit: 'basicPage', questions: [
             {inherit: '7-1'},
             {mixer: 'branch',

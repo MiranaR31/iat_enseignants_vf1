@@ -22,7 +22,7 @@ define(['questAPI'], function(Quest){
 	*/
     API.addQuestionsSet('basicQ',{
         decline: 'true',
-        required : true, 		
+        required : false, 		
         errorMsg: {
             required: isTouch 
                 ? 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser\'' 
@@ -31,8 +31,6 @@ define(['questAPI'], function(Quest){
         autoSubmit:'false',
         numericValues:'true',
         help: '<%= pagesMeta.number < 3 %>',
-        helpText: 'Astuce : Vous pouvez double-cliquer sur votre réponse pour passer à la question suivante.',
-		helpText: 'Attention, vous ne pourrez pas revenir sur votre réponse précédente.'
 	});
     API.addQuestionsSet('basicSelect',{ //Sélection unique 
         inherit :'basicQ',
@@ -66,21 +64,21 @@ define(['questAPI'], function(Quest){
 
 	//Profs
 
-	API.addQuestionsSet('0',{
-		inherit : 'basicText',
-		name : 'nom', 
-		stem : 'Votre nom'
-	});
+    API.addQuestionsSet('0',{
+        inherit: 'basicText',
+        name: 'prof_nom',
+        stem: '<b>Veuillez indiquer :</b> <br> <br> Votre nom',
+    })
 
 	API.addQuestionsSet('0bis',{
 		inherit : 'basicText',
-		name : 'prénom', 
+		name : 'prof_prénom', 
 		stem : 'Votre prénom'
 	});
 
     API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
-		name : 'sexe', 
+		name : 'prof_genre', 
 		stem : 'Quel est votre sexe à l\'état-civil ?',
         answers: [
             {text:'Homme', value:1},
