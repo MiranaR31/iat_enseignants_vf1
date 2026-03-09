@@ -124,7 +124,7 @@ define(['managerAPI',
         
         
         {inherit: 'intro'},
-        //{inherit: 'demographics'},
+        {inherit: 'demographics'},
         {inherit: 'explicit_test'},
         //{mixer: 'wrapper',
             //data: [
