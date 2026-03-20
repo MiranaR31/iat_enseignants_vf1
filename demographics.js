@@ -14,7 +14,12 @@ define(['questAPI'], function(Quest){
         submitText: 'Suivant',
         prev: true,
         prevText: 'Précédent',
-        required: true
+        required: true,
+        errorMsg: {
+            required: isTouch 
+                ? 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser\'' 
+                : 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser de répondre\''
+        }
     });
 
 
