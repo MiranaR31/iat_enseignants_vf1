@@ -944,7 +944,7 @@ define(['questAPI'], function(Quest){
                 data: [{
                     type: 'selectMulti',
                     name: 'matieresL1',
-                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 1 ?',
+                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 1 ? <i>(Plusieurs réponses possibles)</i>',
                     answers: matieresL1.map(function(m) { return m.nom; }),
                     onSubmit: function(log, global) {
                         var reponses = log.response;
@@ -967,7 +967,7 @@ define(['questAPI'], function(Quest){
                 data: [{
                     type: 'selectMulti',
                     name: 'matieresL2',
-                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 2 ?',
+                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 2 ? <i>(Plusieurs réponses possibles)</i>',
                     answers: matieresL2.map(function(m) { return m.nom; }),
                     onSubmit: function(log, global) {
                         var reponses = log.response;
@@ -990,7 +990,7 @@ define(['questAPI'], function(Quest){
                 data: [{
                     type: 'selectMulti',
                     name: 'matieresL3',
-                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 3 ?',
+                    stem: 'Quelle(s) matière(s) enseignez-vous en TD cette année à l\'Université Gustave Eiffel en licence 3 ? <i>(Plusieurs réponses possibles)</i>',
                     answers: matieresL3.map(function(m) { return m.nom; }),
                     onSubmit: function(log, global) {
                         var reponses = log.response;

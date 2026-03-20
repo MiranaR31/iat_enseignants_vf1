@@ -22,7 +22,7 @@ define(['questAPI'], function(Quest){
 	*/
     API.addQuestionsSet('basicQ',{
         decline: 'true',
-        required : false, 		
+        required : true, 		
         errorMsg: {
             required: isTouch 
                 ? 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser\'' 
