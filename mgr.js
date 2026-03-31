@@ -29,12 +29,20 @@ define(['managerAPI',
             header: 'Welcome'
         }],
 
-        raceiat_instructions: [{
+        raceiat_instructions_m: [{
             inherit: 'instructions',
-            name: 'raceiat_instructions',
-            templateUrl: 'raceiat_instructions.jst',
-            title: 'IAT Instructions',
-            header: 'Implicit Association Test'
+            name: 'raceiat_instructions_m',
+            templateUrl: 'raceiat_instructions_m.jst',
+            title: 'Instructions Test D\'Association Implicite',
+            header: 'Test D\'Association Implicite'
+        }],
+
+         raceiat_instructions_f: [{
+            inherit: 'instructions',
+            name: 'raceiat_instructions_f',
+            templateUrl: 'raceiat_instructions_f.jst',
+            title: 'Instructions Test D\'Association Implicite',
+            header: 'Test D\'Association Implicite'
         }],
 
 		demographics: [{
@@ -49,22 +57,16 @@ define(['managerAPI',
             scriptUrl: 'explicits.js'
         }],
 
-        explicit_test: [{
-            type: 'quest',
-            name: 'explicit_test',
-            scriptUrl: 'explicit_test.js'
-        }],
-
         raceiat: [{
             type: 'time',
             name: 'raceiat',
-            scriptUrl: 'raceiat.js'
+            scriptUrl: 'raceiat_m.js'
         }],
 
         raceiatf: [{
             type: 'time',
             name: 'raceiatf',
-            scriptUrl: 'raceiatf.js'
+            scriptUrl: 'raceiat_f.js'
         }],
 
         lastpage: [{
@@ -125,20 +127,20 @@ define(['managerAPI',
         
         {inherit: 'intro'},
         {inherit: 'demographics'},
-        {inherit: 'explicit_test'},
-        //{mixer: 'wrapper',
-            //data: [
-              //  {inherit: 'raceiat_instructions'},
-                //{inherit: 'raceiat'}
-           // ]
-       // },
-       // {
-        //    mixer: 'wrapper',
-          //  data: [
-          //      {inherit: 'raceiat_instructions'},
-          //      {inherit: 'raceiatf'}
-          //  ]
-        //},
+        {mixer: 'wrapper',
+            data: [
+                {inherit: 'raceiat_instructions_m'},
+                {inherit: 'raceiat_m'}
+            ]
+        },
+        {
+            mixer: 'wrapper',
+            data: [
+                {inherit: 'raceiat_instructions_f'},
+                {inherit: 'raceiat_f'}
+            ]
+        },
+        {inherit: 'explicits'},
 
 		{inherit: 'uploading'},
         {inherit: 'lastpage'},

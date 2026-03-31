@@ -72,15 +72,9 @@ define(['questAPI'], function(Quest){
 
     API.addQuestionsSet('0',{
         inherit: 'basicText',
-        name: 'prof_nom',
-        stem: '<b>Veuillez indiquer :</b> <br> <br> Votre nom',
+        name: 'id',
+        stem: 'Veuillez indiquer votre identifiant',
     })
-
-	API.addQuestionsSet('0bis',{
-		inherit : 'basicText',
-		name : 'prof_prénom', 
-		stem : 'Votre prénom'
-	});
 
     API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
@@ -101,7 +95,10 @@ define(['questAPI'], function(Quest){
 		errorMsg : {
             min: 'Veuillez indiquer une année de naissance valide.',
             max: 'Veuillez indiquer une année de naissance valide.',
-            number: 'Veuillez indiquer une année de naissance valide.'
+            number: 'Veuillez indiquer une année de naissance valide.',
+            required: isTouch 
+                ? 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser\'' 
+                : 'Veuillez sélectionner une réponse ou cliquer sur \'Refuser de répondre\''
         },
         validator: {
             min: 1900,
@@ -139,10 +136,7 @@ define(['questAPI'], function(Quest){
     API.addSequence([
         {inherit: 'basicPage', 
             decline: false,
-            questions: [
-                {inherit: '0'},
-                {inherit: '0bis'}
-            ]
+            questions: [{inherit: '0'}]
         },
         {inherit: 'basicPage', questions: {inherit: '1'}},
         {inherit: 'basicPage', questions: {inherit: '2'}},
