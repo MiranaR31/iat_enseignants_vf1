@@ -72,7 +72,7 @@ define(['questAPI'], function(Quest){
 
     API.addQuestionsSet('0',{
         inherit: 'basicText',
-        name: 'id',
+        name: 'id_prof',
         stem: 'Veuillez indiquer votre identifiant',
     })
 
