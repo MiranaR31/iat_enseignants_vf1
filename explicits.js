@@ -196,6 +196,7 @@ define(['questAPI'], function(Quest){
     var matieresL1 = [
         {nom: 'Anglais (S1)', prefix: 'l1anglais1_'},
         {nom: 'Mathématiques 1 (S1)', prefix: 'l1maths1_'},
+		{nom: 'Renforcement en mathématiques (S1)', prefix: 'l1renfo_maths_'},
         {nom: 'Statistiques descriptives 1 (S1)', prefix: 'l1stats1_'},
         {nom: 'Introduction à l\'économie (S1)', prefix: 'l1intro_eco_'},
         {nom: 'Introduction à la gestion et au management (S1)', prefix: 'l1intro_gest_'},
@@ -302,19 +303,19 @@ define(['questAPI'], function(Quest){
 	});
 
 
-	API.addQuestionsSet('l1renfo_maths1',{
+	API.addQuestionsSet('l1renfo_maths_1',{
 		inherit: '9', 
 		name: 'l1renfo_maths_prof1',
 		header: 'Renforcement en mathématiques (S1)'
 	});
 
-	API.addQuestionsSet('l1renfo_maths2',{
+	API.addQuestionsSet('l1renfo_maths_2',{
 		inherit: '10', 
 		name: 'l1renfo_maths_prof2',
 		header: 'Renforcement en mathématiques (S1)'
 	});
 
-	API.addQuestionsSet('l1renfo_maths3',{
+	API.addQuestionsSet('l1renfo_maths_3',{
 		inherit: '11', 
 		name: 'l1renfo_maths_prof3',
 		header: 'Renforcement en mathématiques (S1)'
