@@ -57,13 +57,13 @@ define(['managerAPI',
             scriptUrl: 'explicits.js'
         }],
 
-        raceiat: [{
+        raceiat_m: [{
             type: 'time',
             name: 'raceiat',
             scriptUrl: 'raceiat_m.js'
         }],
 
-        raceiatf: [{
+        raceiat_f: [{
             type: 'time',
             name: 'raceiatf',
             scriptUrl: 'raceiat_f.js'
