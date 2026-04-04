@@ -918,7 +918,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('20',{
 		inherit : 'likert5',
 		name : 'biais',
-		stem : 'Je pense avoir un biais envers les étudiants d\'origine mahrébine et africaine.'
+		stem : 'Je pense avoir un biais négatif envers les étudiants d\'origine mahrébine et africaine.'
 	});
 
 	
@@ -1036,9 +1036,9 @@ define(['questAPI'], function(Quest){
 				],
 				rows: [
 					{name : 'prof_reponse_eleve',
-						stem : 'Dans votre enseignement, vous laissez les étudiants chercher les réponses, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.'},
+						stem : 'Dans votre enseignement en TD, vous laissez les étudiants chercher les réponses, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.'},
 					{name : 'prof_participation_eleve',
-						stem : 'Dans votre enseignement, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.'},
+						stem : 'Dans votre enseignement en TD, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.'},
 					{name : 'prof_travail_eleve',
 						stem : 'Si un étudiant travaille suffisamment, il peut devenir le meilleur de sa classe (quelles que soient ses capacités innées).'},
 					{name : 'prof_autorite',

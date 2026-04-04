@@ -4,7 +4,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 
     return iatExtension({
         category1 : {
-            name : 'Immigrants', //Will appear in the data.
+            name : 'Arabo-musulmane', //Will appear in the data.
             title : {
                 media : {word : 'Immigrant'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
@@ -22,7 +22,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : 'Français', //Will appear in the data.
+            name : 'Française', //Will appear in the data.
             title : {
                 media : {word : 'Natif'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
@@ -47,14 +47,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: 'Irrespectueux'},
+                {word: 'Irrespectueuse'},
 				{word: 'Incapable'},
-				{word: 'Paresseux'},
-				{word: 'Involontaire'},
-                {word: 'Lent'},
-                {word: 'Bruyant'},
-                {word: 'Distrait'},
-                {word: 'Démotivé'}
+				{word: 'Paresseuse'},
+				{word: 'Incompétente'},
+                {word: 'Insuffisante'},
+                {word: 'Agitée'},
+                {word: 'Distraite'},
+                {word: 'Démotivée'}
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -67,14 +67,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: 'Respectueux'},
-				{word: 'Capable'},
-				{word: 'Préparé'},
-				{word: 'Volontaire'},
-                {word: 'Intelligent'},
-                {word: 'Compétent'},
-                {word: 'Studieux'},
-                {word: 'Précis'},
+                {word: 'Préparée'},
+				{word: 'Intelligente'},
+				{word: 'Compétente'},
+				{word: 'Studieuse'},
+                {word: 'Capable'},
+                {word: 'Sérieuse'},
+                {word: 'Motivée'},
+                {word: 'Respectueuse'},
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}

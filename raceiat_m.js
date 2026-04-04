@@ -47,14 +47,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: 'Irrespectueux'},
+                {word: 'Insuffisant'},
 				{word: 'Incapable'},
+				{word: 'Incompétent'},
 				{word: 'Paresseux'},
-				{word: 'Involontaire'},
-                {word: 'Lent'},
-                {word: 'Bruyant'},
                 {word: 'Distrait'},
-                {word: 'Démotivé'}
+                {word: 'Agité'},
+                {word: 'Démotivé'},
+                {word: 'Irrespectueux'}
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -67,14 +67,14 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             },
             stimulusMedia : [ //Stimuli content as PIP's media objects
+                {word: 'Préparé'},
+				{word: 'Intelligent'},
+				{word: 'Compétent'},
+				{word: 'Studieux'},
+                {word: 'Capable'},
+                {word: 'Sérieux'},
+                {word: 'Motivé'},
                 {word: 'Respectueux'},
-				{word: 'Capable'},
-				{word: 'Préparé'},
-				{word: 'Volontaire'},
-                {word: 'Intelligent'},
-                {word: 'Compétent'},
-                {word: 'Studieux'},
-                {word: 'Précis'},
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
