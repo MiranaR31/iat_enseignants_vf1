@@ -127,17 +127,21 @@ define(['managerAPI',
         
         {inherit: 'intro'},
         {inherit: 'demographics'},
-        {mixer: 'wrapper',
+        {mixer: 'random',
             data: [
-                {inherit: 'raceiat_instructions_m'},
-                {inherit: 'raceiat_m'}
-            ]
-        },
-        {
-            mixer: 'wrapper',
-            data: [
-                {inherit: 'raceiat_instructions_f'},
-                {inherit: 'raceiat_f'}
+                {mixer: 'wrapper',
+                    data: [
+                        {inherit: 'raceiat_instructions_m'},
+                        {inherit: 'raceiat_m'}
+                    ]
+                },
+                {
+                    mixer: 'wrapper',
+                    data: [
+                        {inherit: 'raceiat_instructions_f'},
+                        {inherit: 'raceiat_f'}
+                    ]
+                }
             ]
         },
         {inherit: 'explicits'},
