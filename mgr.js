@@ -79,9 +79,14 @@ define(['managerAPI',
             header: 'You have completed the study'
         }], 
         
+        consentement_fin : [{
+            type: 'quest',
+            name: 'consentement_fin',
+            scriptUrl: 'consentement_fin.js'
+        }],
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
+        uploading: uploading_task({header: 'Veuillez patienter', body:'Veuillez patienter pendant que vos réponses sont envoyées au serveur.'}),
     });
 
     API.addSequence([
@@ -123,7 +128,6 @@ define(['managerAPI',
                 }
             ]
         },
-        
         
         {inherit: 'intro'},
         {inherit: 'demographics'},
