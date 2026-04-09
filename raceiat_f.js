@@ -12,11 +12,11 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
                 {word: 'Yasmine'},
-                {word: 'Zaynab'},
+                {word: 'Fatma'},
                 {word: 'Fatima'},
                 {word: 'Aya'},
                 {word: 'Kenza'},                 
-                {word: 'Mariem'}     
+                {word: 'Aïcha'}     
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
@@ -52,8 +52,8 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 				{word: 'Paresseuse'},
 				{word: 'Incompétente'},
                 {word: 'Insuffisante'},
-                {word: 'Agitée'},
-                {word: 'Distraite'},
+                {word: 'Perturbatrice'},
+                {word: 'Dissipée'},
                 {word: 'Démotivée'}
             ],
             //Stimulus css
@@ -69,7 +69,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusMedia : [ //Stimuli content as PIP's media objects
                 {word: 'Préparée'},
 				{word: 'Intelligente'},
-				{word: 'Compétente'},
+				{word: 'Brillante'},
 				{word: 'Studieuse'},
                 {word: 'Capable'},
                 {word: 'Sérieuse'},

@@ -124,14 +124,24 @@ define(['questAPI'], function(Quest){
 			{text:'Non', value:2}]
 	});
 
-	API.addQuestionsSet('5',{
+	API.addQuestionsSet('5-1',{
 		inherit : 'basicSelect',
-		name : 'iat',
-		stem : 'Avez-vous déjà passé un test d\'association implicite (IAT) ?',
+		name : 'iat1',
+		stem : 'Avez-vous déjà entendu parler des tests d\'association implicite (IAT) ?',
 		answers : [
 			{text:'Oui', value:1},
 			{text:'Non', value:2}]
 	});
+
+    API.addQuestionsSet('5-2',{
+        inherit: 'basicSelect',
+        name: 'iat2',
+        stem: 'Si oui, avez-vous déjà passé un test d\'association implicite (IAT) ?',
+        answers: [
+            {text:'Oui', value:1},
+            {text:'Non', value:2}]
+    });
+
 
     API.addSequence([
         {inherit: 'basicPage', 
@@ -142,8 +152,18 @@ define(['questAPI'], function(Quest){
         {inherit: 'basicPage', questions: {inherit: '2'}},
         {inherit: 'basicPage', questions: {inherit: '3'}},
         {inherit: 'basicPage', questions: {inherit: '4'}},
-        {inherit: 'basicPage', questions: {inherit: '5'}}
+        {inherit: 'basicPage', questions: [
+            {inherit: '5-1'},
+            {remix: true,
+                mixer: 'branch', 
+                conditions: [{compare: 1, to:'current.questions.iat1.response'}],
+                data: [
+                    {inherit: '5-2'}
+                ]
+            }
+        ]}
     ]);
 
     return API.script;
+
 });

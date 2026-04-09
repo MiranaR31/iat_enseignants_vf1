@@ -16,7 +16,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 {word: 'Youssef'},
                 {word: 'Mehdi'},
                 {word: 'Ibrahim'},                 
-                {word: 'Younes'}     
+                {word: 'Amine'}     
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
@@ -51,8 +51,8 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 				{word: 'Incapable'},
 				{word: 'Incompétent'},
 				{word: 'Paresseux'},
-                {word: 'Distrait'},
-                {word: 'Agité'},
+                {word: 'Dissipé'},
+                {word: 'Perturbateur'},
                 {word: 'Démotivé'},
                 {word: 'Irrespectueux'}
             ],
@@ -69,7 +69,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusMedia : [ //Stimuli content as PIP's media objects
                 {word: 'Préparé'},
 				{word: 'Intelligent'},
-				{word: 'Compétent'},
+				{word: 'Brillant'},
 				{word: 'Studieux'},
                 {word: 'Capable'},
                 {word: 'Sérieux'},

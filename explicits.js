@@ -70,8 +70,8 @@ define(['questAPI'], function(Quest){
 		helpText: false,
 		columns: [
 			{stem: '1 - Pas du tout d\'accord', css: {width: '10%'}},
-			{stem: '2 - Plutôt d\'accord', css: {width: '10%'}},
-			{stem: '3 - Plutôt pas d\'accord', css: {width: '10%'}},
+			{stem: '2 - Plutôt pas d\'accord', css: {width: '10%'}},
+			{stem: '3 - Plutôt d\'accord', css: {width: '10%'}},
 			{stem: '4 - Tout à fait d\'accord', css: {width: '10%'}}
 		]
 	}),
@@ -1006,6 +1006,9 @@ define(['questAPI'], function(Quest){
     
 		{inherit: 'basicPage', questions: {inherit: '12'}},
 		{inherit: 'basicPage', questions: {inherit: '13'}},
+		{inherit: 'basicPage',		
+			type: 'info',	
+			description: '<span style="font-size:1.2em">Nous allons maintenant vous poser des questions sur vos opinions en général.</span>'},
 		{inherit: 'basicPage', questions: [
 			{
 				type: 'grid',
@@ -1013,8 +1016,8 @@ define(['questAPI'], function(Quest){
 				stem: 'Dans quelle mesure êtes-vous d\'accord avec les propositions suivantes ?',
 				columns: [
 					{stem: 'Pas du tout d\'accord', css: {width: '15%'}},
-					{stem: 'Plutôt d\'accord',  css: {width: '15%'}},
 					{stem: 'Plutôt pas d\'accord',  css: {width: '15%'}},
+					{stem: 'Plutôt d\'accord',  css: {width: '15%'}},
 					{stem: 'Tout à fait d\'accord', css: {width: '15%'}}
 				],
 				rows: [
@@ -1030,8 +1033,8 @@ define(['questAPI'], function(Quest){
 				stem: 'Dans quelle mesure êtes-vous d\'accord avec les propositions suivantes ?',
 				columns: [
 					{stem: 'Pas du tout d\'accord', css: {width: '15%'}},
-					{stem: 'Plutôt d\'accord',  css: {width: '15%'}},
 					{stem: 'Plutôt pas d\'accord',  css: {width: '15%'}},
+					{stem: 'Plutôt d\'accord',  css: {width: '15%'}},
 					{stem: 'Tout à fait d\'accord', css: {width: '15%'}}
 				],
 				rows: [

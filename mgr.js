@@ -151,7 +151,7 @@ define(['managerAPI',
         {inherit: 'explicits'},
 
 		{inherit: 'uploading'},
-        {inherit: 'lastpage'},
+        {inherit: 'consentement_fin'},
         {inherit: 'redirect'}
     ]);
 
