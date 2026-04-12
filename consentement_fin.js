@@ -57,6 +57,9 @@ define(['questAPI'], function(Quest){
                 rows: [
                     {right: 'J\'ai compris les informations ci-dessus et j\'accepte que mes données soient utilisées dans le cadre de cette étude.', value :1}, 
                 ] 
+            },
+            {type: 'info',
+            description: '<span style="font-size:1.2em">Pour toute question relative à cette recherche, à vos droits RGPD ou à l\'interprétation du test, vous pouvez vous nous contacter aux adresses suivantes : <u>mirana.ranerison@univ-eiffel.fr<u> ou <u>marine.de-talance@univ-eiffel.fr<u>.'
             }
             ]   
         }
