@@ -1022,7 +1022,7 @@ define(['questAPI'], function(Quest){
 				],
 				rows: [
 					{stem: 'C\'est mieux pour une classe s\'il y a une diversité de coutumes, de cultures et d\'origines.', name: 'diff_culture'},
-					{stem: 'Les étudiants d\'origine mahrébine et africaine ont en moyenne plus de difficultés dans certaines matières, au-delà des problèmes de langue potentielle.', name: 'difficulte_afro'}
+					{stem: 'Les étudiants d\'origine maghrébine et africaine ont en moyenne plus de difficultés dans certaines matières, au-delà des problèmes de langue potentielle.', name: 'difficulte_afro'}
 				]
 			}
 		]},
