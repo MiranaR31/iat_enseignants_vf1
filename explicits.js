@@ -905,7 +905,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('13',{
 		inherit : 'likert5',
 		name : 'satisfaction',
-		stem : 'Dans quelle mesure êtes-vous satisfait(e)s du métier d\'enseignant ?',
+		stem : 'Dans quelle mesure êtes-vous satisfait(e) du métier d\'enseignant ?',
 		answers : [
 			{text : 'Pas du tout satisfait(e)', value:1},
 			{text : 'Plutôt pas satisfait(e)', value:2},
@@ -1022,7 +1022,7 @@ define(['questAPI'], function(Quest){
 				],
 				rows: [
 					{stem: 'C\'est mieux pour une classe s\'il y a une diversité de coutumes, de cultures et d\'origines.', name: 'diff_culture'},
-					{stem: 'Les étudiants d\'origine maghrébine et africaine ont en moyenne plus de difficultés dans certaines matières, au-delà des problèmes de langue potentielle.', name: 'difficulte_afro'}
+					{stem: 'Les étudiants d\'origine maghrébine et africaine ont en moyenne plus de difficultés dans certaines matières, au-delà des problèmes de langue potentiels.', name: 'difficulte_afro'}
 				]
 			}
 		]},
